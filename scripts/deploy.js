@@ -11,7 +11,7 @@ const web3 = createAlchemyWeb3(API_URL);
 
 async function main() {
   const DiToken = await hre.ethers.getContractFactory("DiToken");
-  const totalSupply = '100';
+  const totalSupply = '200';
   const token = await DiToken.deploy("DiToken", "DT", web3.utils.toWei(totalSupply,"ether"));
 
   await token.deployed();
